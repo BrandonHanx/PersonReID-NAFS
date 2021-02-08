@@ -1,7 +1,7 @@
-BASE_ROOT=.
+BASE_ROOT=..
 
 IMAGE_ROOT=$BASE_ROOT/data/CUHK-PEDES/imgs
-JSON_ROOT=$BASE_ROOT/data/reid_raw.json
+JSON_ROOT=$BASE_ROOT/data/CUHK-PEDES/reid_raw.json
 OUT_ROOT=$BASE_ROOT/data/processed_data
 
 
