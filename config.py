@@ -21,9 +21,11 @@ def data_config(image_dir, anno_dir, batch_size, split, max_length, transform, v
     data_split = CuhkPedes(image_dir, anno_dir, split, max_length, transform, \
                             vocab_path=vocab_path, min_word_count=min_word_count, cap_transform=cap_transform)
     if split == 'train':
-        loader = data.DataLoader(data_split, batch_size, shuffle=True, num_workers=4, drop_last=True)
+        shuffle = True
+        loader = data.DataLoader(data_split, batch_size, shuffle=shuffle, num_workers=4, drop_last=True)
     else:
-        loader = data.DataLoader(data_split, batch_size, shuffle=False, num_workers=4, drop_last=False)    
+        shuffle = False
+        loader = data.DataLoader(data_split, batch_size, shuffle=shuffle, num_workers=4, drop_last=False)    
     return loader
 
 def get_image_unique(image_dir, anno_dir, batch_size, split, max_length, transform):

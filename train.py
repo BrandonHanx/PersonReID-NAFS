@@ -48,6 +48,7 @@ def train(epoch, train_loader, network, optimizer, compute_loss, args, co_locati
         sep_captions = []
         
         n_sep = 2
+
         for i, c in enumerate(captions):
             c = re.split(r'[;,!?.]', c)
             if len(c) > n_sep or len(c) == n_sep:

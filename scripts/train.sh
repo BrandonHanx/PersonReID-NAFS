@@ -1,9 +1,9 @@
-GPUS=0
+GPUS=
 export CUDA_VISIBLE_DEVICES=$GPUS
 
-BASE_ROOT=.
-IMAGE_DIR=$BASE_ROOT/data/
-ANNO_DIR=$BASE_ROOT/data/processed_data/
+IMAGE_DIR=
+BASE_ROOT=
+ANNO_DIR=$BASE_ROOT/data/processed_data
 
 CKPT_DIR=$BASE_ROOT/data/model_data
 LOG_DIR=$BASE_ROOT/data/logs

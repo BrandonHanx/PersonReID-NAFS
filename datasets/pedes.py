@@ -93,6 +93,7 @@ class CuhkPedes(data.Dataset):
         with open(split_root, 'r') as f:
             split_data = json.load(f)        
         print('load {} data from json done'.format(split))
+        
         return split_data
 
     def load_vocab(self, vocab_path):    
@@ -168,7 +169,7 @@ class CuhkPedes(data.Dataset):
 
         if self.target_transform is not None:
             label = self.target_transform(label)
-        
+
         return img, caption, label                        
 
     def __len__(self):

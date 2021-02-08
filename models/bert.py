@@ -3,16 +3,15 @@ from torch import nn
 
 from pytorch_transformers import BertModel, BertConfig, BertTokenizer
 
-import os
 
 class Bert(nn.Module):
     def __init__(self): 
         super(Bert, self).__init__()
 
-        self.tokenizer = BertTokenizer.from_pretrained('pretrained/bert-base-uncased/bert-base-uncased-vocab.txt')
-        modelConfig = BertConfig.from_pretrained('pretrained/bert-base-uncased/bert_config.json')
+        self.tokenizer = BertTokenizer.from_pretrained('../pretrained/bert-base-uncased/bert-base-uncased-vocab.txt')
+        modelConfig = BertConfig.from_pretrained('../pretrained/bert-base-uncased/bert_config.json')
         self.textExtractor = BertModel.from_pretrained(
-            'pretrained/bert-base-uncased/pytorch_model.bin', config=modelConfig)
+            '../pretrained/bert-base-uncased/pytorch_model.bin', config=modelConfig)
         
     def pre_process(self, texts):
 
