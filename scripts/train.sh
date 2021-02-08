@@ -1,8 +1,8 @@
-GPUS=
+GPUS=0
 export CUDA_VISIBLE_DEVICES=$GPUS
 
-IMAGE_DIR=
-BASE_ROOT=
+BASE_ROOT=.
+IMAGE_DIR=$BASE_ROOT/data
 ANNO_DIR=$BASE_ROOT/data/processed_data
 
 CKPT_DIR=$BASE_ROOT/data/model_data
@@ -41,6 +41,3 @@ python $BASE_ROOT/train.py \
     --part2 3 \
     --part3 2 \
     --reranking
-
-
-
